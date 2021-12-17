@@ -11,3 +11,10 @@ case $SOMETHING in
         ;;
 esac
 #######
+# ways to go to home directory.
+cd $home
+#####################
+#fancyvariableassignment.sh
+#https://tldp.org/LDP/abs/html/varassignment.html
+#+ quoted variable perserves whitespace. further check "Quoting" chapter
+#######################
