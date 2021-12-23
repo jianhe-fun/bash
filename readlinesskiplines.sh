@@ -18,11 +18,18 @@ lineToSkip=1
                 read
         done
         while read line; do
-                echo -e "$line"
+                echo -e "$line\n"
         done
 } < '/mnt/c/Users/JIAN HE/Desktop/test.csv'
 echo "----------"
 echo "simple way using read to skip line1"
 {
-        read; while read line; do echo $line; done
+        read; while read line; do echo "$line"; done
+
 } < '/mnt/c/Users/JIAN HE/Desktop/test.csv'
+
+echo "The best simple solution to do it. with sed"
+#Use -n to suppress output, and the p command to print specific lines. 
+sed -n '2,$p' < '/mnt/c/Users/JIAN HE/Desktop/test.csv'
+
+
