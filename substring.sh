@@ -36,5 +36,24 @@ if  grep -q 'my' <<<"$String"; then
         echo "it's there";
 else echo "It's not here";
 fi
+echo "#6..... ."
+
+
+if file -b "$1" | grep -q "Bourne-Again shell script, ASCII text executable" ;
+then echo "yes"; else echo "no";
+fi
 
 exit 0
+
+echo "-------------------------"
+echo "more generic way to get the substring."
+# cut 2 refer to the second field after using delimiter.
+echo 'someletters_12345_moreleters.ext' | cut -d'_' -f 2
+
+input='some_of_your_navie_thought'
+# It's 1-based indices.
+substring=$(echo $input | cut -d'_' -f 2)
+echo ${substring}
+
+
+
